@@ -1,0 +1,12 @@
+<h1>My edit</h1>
+
+<%= form_for @song do |c| %>
+    <%= c.label "Song Name:" %><br>
+    <%= c.text_field :name %><br>
+    <%= c.label "Artist Id:" %><br>
+    <%= c.text_field :artist_id %><br>
+    <%= c.label "Genre Id:" %><br>
+    <%= c.text_field :genre_id %><br>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <%= c.submit "Update Song"%>
+ <% end %>    

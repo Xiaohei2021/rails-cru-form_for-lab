@@ -1,0 +1,15 @@
+<h1>Song Index</h1>
+
+<p>My Song: <%=Artist.first.name%></p>
+<% @songs.each do |s| %>
+    <% if s.artist_id == 1 %>
+        <%= s.name %><br>
+    <% end %>
+<% end %>
+
+<br>
+<br>
+
+<% @songs.each do |s| %>
+    <div><%= link_to s.name, song_path(s) %> - <%= s.artist.try(:name) %></div>
+<% end %>

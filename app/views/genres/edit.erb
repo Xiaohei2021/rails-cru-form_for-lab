@@ -1,0 +1,6 @@
+<%= form_for @genre do |c| %>
+    <%= c.label "Genre Name: " %><br>
+    <%= c.text_field :name %><br>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <%= c.submit "Update Genre"%>
+ <% end %>    
